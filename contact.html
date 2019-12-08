@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en" id="contact">
+  <head>
+    <title>Order Food</title>
+      <meta charset="utf-8">
+      <meta name="referrer" content="origin">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+      <link rel="stylesheet" type="text/css" href="styling/normalize.css">
+      <link rel="stylesheet" type="text/css" href="styling/style.css" />
+  </head>
+  <body class="contactpg">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/faq.js"></script>
+	
+    <header id="header">
+	 <h1 class="contact">Ask T's for the Soul</h1>
+	   <nav id="navigation">
+        <ul id= "topbar">
+		 <img class="titlemain" src="media/logo.png" alt = "T's for the Soul" />
+		 <a href="index.html">Home Page</a>
+		 <a href="about.html"> Company </a>
+		 <a href="contact.html"> Order Food</a>
+		</ul>
+      </nav>
+    </header>
+  
+  
+    <div class="faq_container">
+      <div id = questions class="faq">
+        <div class="faq_question">How do I order?</div>
+          <div class="faq_answer_container">
+            <div class="faq_answer">Feel free to call or fill the form online.</div>
+          </div>
+      </div>
+
+      <div id = questions class="faq">
+        <div class="faq_question">How do I send a question?</div>
+          <div class="faq_answer_container">
+            <div class="faq_answer">Fill out the form at the bottom and we will get back to you with in 24 hrs.</div>
+          </div>
+      </div>
+
+      <div id = questions class="faq">
+        <div class="faq_question">Can I do catering delivery order?</div>
+          <div class="faq_answer_container">
+            <div class="faq_answer">We love bulk orders and encourage them!</div>
+          </div>
+      </div>
+    </div>
+	
+    <fieldset id="contact">
+
+      <h2>Send Your Order or Question</h2>
+      <form id="contactForm" >
+
+        <div id="name_box">
+          <label for="name" style="display: block;">Name</label>
+          <input type="text" class="form-control fullname" id="exampleFullName" placeholder="Amairani Lopez" required>
+        </div>
+
+        <div id="email_box">
+          <label class="name" style="display: block;">Email</label>
+          <input type="email" class="form-control email" id="exampleEmail" placeholder="alopez@gmail.com" required>
+        </div>
+		
+        <div>
+          <label for="name" style="display: block;">Order/Question</label>
+		  <textarea class="form-control message" id="exampleMessage" placeholder="Example: I want 3 red pork tamales." required></textarea>
+        </div>
+		
+        <input type="submit" value="Send" class="sub_but">
+		<input type="reset" value="Clear">
+		
+
+      </form>
+
+    </fieldset>
+	
+	<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
+	<script src="js/db.js"></script>
+
+	<footer id="footer">
+	  <ul>
+		  <h4>T's<em> 2019 </em> <strong>&copy;</strong></h4>
+	  </ul>
+	</footer>
+  </body>
+</html>
