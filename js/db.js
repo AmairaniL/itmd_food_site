@@ -12,7 +12,7 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   
-  
+  //Form and Firebase connection
   var messagesRef = firebase.database().ref('tosandqs');
   
 $('#contactForm').submit(function(e) {
@@ -30,5 +30,24 @@ $('#contactForm').submit(function(e) {
     $('#contactForm')[0].reset();
 });
 
+//http requests
+const functions = require('firebase-functions');
+const express = require('express');
+const cors = require('cors');
+const app = express();
 
+app.use(cors({ origin: true }));
 
+app.get('/hello', (req, res) => {
+  res.end("GET request!");  
+});
+
+if (request.method != "POST") {
+     respond.status(400).send("404 Not Found");
+}
+app.post('/hello', (req, res) => {
+  res.end("POST request!");  
+});
+
+// Expose Express API as a single Cloud Function:
+exports.widgets = functions.https.onRequest(app);
